@@ -6,6 +6,12 @@ def game_play():
         moves = ["rock","paper","scissors"]
         computer = random.choice(moves)
 
+        
+        if player not in moves:
+            print("invalid move played")
+            continue
+
+
         if player == computer:
             print("It's a tie")
         elif player == "paper":
@@ -15,14 +21,14 @@ def game_play():
                 print("Scissors cuts paper")
         elif player == "scissors":
             if computer == "paper":
-                print("Scissors cuts paper")
+                print("Scissors cuts paper, Paper loses!")
             else:
-                print("rock crushes scissors")
+                print("rock crushes scissors, Scissors loses!")
         elif player == "rock":
             if computer == "scissors":
-                print("rock crushes scissors")
+                print("rock crushes scissors, Scissors lose!")
             else:
-                print("paper covers rock")
+                print("paper covers rock, Rock loses!")
 
         play_again = input("Do you wnat to play again? (yes/no): ")
         if play_again.lower() != "yes":

@@ -6,12 +6,12 @@ def game_play():
         moves = ["rock","paper","scissors"]
         computer = random.choice(moves)
 
-        
+        #Checking for invalid moves by player
         if player not in moves:
             print("invalid move played")
             continue
 
-
+        #Determining the winner and loser
         if player == computer:
             print("It's a tie")
         elif player == "paper":
